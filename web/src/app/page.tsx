@@ -52,7 +52,7 @@ export default function Home() {
         {/* Centered Desktop App Download */}
         <div style={{ display: 'flex', justifyContent: 'center', marginTop: '1.5rem' }}>
           <a 
-            href="https://drive.google.com/file/d/19vUIwMNqMveJZliojYZhcT02TqvMOhha/view?usp=sharing" 
+            href="https://drive.google.com/uc?export=download&id=19vUIwMNqMveJZliojYZhcT02TqvMOhha" 
             target="_blank"
             rel="noopener noreferrer"
             style={{
