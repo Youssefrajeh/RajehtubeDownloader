@@ -5,7 +5,7 @@
 _Saved/
 
 # tools folder - do not push binaries
-tools/
+#tools/
 !web/tools/cookies.txt
 
 # User-specific files
