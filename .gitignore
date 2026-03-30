@@ -6,6 +6,7 @@ _Saved/
 
 # tools folder - do not push binaries
 tools/
+!web/tools/cookies.txt
 
 # User-specific files
 *.rsuser
