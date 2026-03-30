@@ -27,7 +27,11 @@ export async function POST(req: NextRequest) {
       actualPath = fallbackPath;
     }
 
-    const args = ['--dump-json', '--flat-playlist', url];
+    // Support for cookies.txt in the tools folder
+    const cookiesPath = path.join(appDir, 'tools', 'cookies.txt');
+    const cookieArgs = fs.existsSync(cookiesPath) ? ['--cookies', cookiesPath] : [];
+
+    const args = ['--dump-json', '--flat-playlist', '--js-runtimes', 'node', ...cookieArgs, url];
     
     return new Promise<NextResponse>((resolve) => {
       const process = spawn(actualPath, args);

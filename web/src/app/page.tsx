@@ -51,21 +51,22 @@ export default function Home() {
       </div>
 
       {/* Input Section */}
-      <div className="glass animate-fade-in" style={{ padding: '1rem', width: '100%', maxWidth: '800px', display: 'flex', gap: '0.5rem', marginBottom: '3rem' }}>
-        <form onSubmit={fetchMetadata} style={{ display: 'flex', width: '100%', gap: '0.5rem' }}>
+      <div className="glass animate-fade-in" style={{ padding: '0.5rem', width: '100%', maxWidth: '800px', marginBottom: '3rem' }}>
+        <form onSubmit={fetchMetadata} style={{ display: 'flex', width: '100%', gap: '0.5rem', flexWrap: 'wrap' }}>
           <input 
             type="text" 
             placeholder="Paste your YouTube link here..." 
             value={url}
             onChange={(e) => setUrl(e.target.value)}
             style={{ 
-              flex: 1, 
+              flex: '1 1 300px', 
               background: 'transparent', 
               border: 'none', 
               color: 'white', 
               fontSize: '1.1rem', 
               padding: '1rem',
-              outline: 'none'
+              outline: 'none',
+              minWidth: '0'
             }}
           />
           <button 
@@ -75,18 +76,17 @@ export default function Home() {
               background: 'linear-gradient(90deg, #ff0000, #ff007f)', 
               color: 'white', 
               border: 'none', 
-              padding: '0 2rem', 
+              padding: '1rem 2rem', 
               borderRadius: '12px', 
               fontSize: '1rem', 
               fontWeight: '600', 
               cursor: 'pointer',
-              transition: 'transform 0.2s',
-              opacity: loading ? 0.7 : 1
+              transition: 'all 0.2s',
+              opacity: loading ? 0.7 : 1,
+              flex: '1 1 100%'
             }}
-            onMouseOver={(e) => (e.currentTarget.style.transform = 'scale(1.05)')}
-            onMouseOut={(e) => (e.currentTarget.style.transform = 'scale(1)')}
           >
-            {loading ? 'Fetching...' : 'Fetch Metadata'}
+            {loading ? 'Processing...' : 'Download'}
           </button>
         </form>
       </div>

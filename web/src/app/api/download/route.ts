@@ -43,11 +43,15 @@ export async function GET(req: NextRequest) {
     }
     // If none found, yt-dlp will try system-wide ffmpeg by default
 
+    // Support for cookies.txt in the tools folder
+    const cookiesPath = path.join(appDir, 'tools', 'cookies.txt');
+    const cookieArgs = fs.existsSync(cookiesPath) ? ['--cookies', cookiesPath] : [];
+
     let args: string[] = [];
     if (isAudio) {
-      args = ['-x', '--audio-format', 'mp3', '--audio-quality', '0', '-o', '-', ...ffmpegArgs, url];
+      args = ['-x', '--audio-format', 'mp3', '--audio-quality', '0', '--js-runtimes', 'node', ...cookieArgs, '-o', '-', ...ffmpegArgs, url];
     } else {
-      args = ['-f', `${formatId}+bestaudio/best`, '--merge-output-format', 'mp4', '-o', '-', ...ffmpegArgs, url];
+      args = ['-f', `${formatId}+bestaudio/best`, '--merge-output-format', 'mp4', '--js-runtimes', 'node', ...cookieArgs, '-o', '-', ...ffmpegArgs, url];
     }
 
     const ytDlp = spawn(actualPath, args);
