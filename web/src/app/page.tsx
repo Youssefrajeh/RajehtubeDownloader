@@ -45,9 +45,44 @@ export default function Home() {
         <h1 style={{ fontSize: '4rem', fontWeight: '800', letterSpacing: '-0.05em', marginBottom: '1rem' }}>
           RajehTube <span className="gradient-text">Downloader</span>
         </h1>
-        <p style={{ fontSize: '1.2rem', color: 'rgba(255,255,255,0.6)', maxWidth: '600px', margin: '0 auto' }}>
+        <p style={{ fontSize: '1.2rem', color: 'rgba(255,255,255,0.6)', maxWidth: '600px', margin: '0 auto', marginBottom: '1.5rem' }}>
           Experience the fast, secure, and modern way to download your favorite YouTube videos and playlists in high quality.
         </p>
+        <a 
+          href="https://drive.google.com/file/d/19vUIwMNqMveJZliojYZhcT02TqvMOhha/view?usp=drive_link" 
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '0.5rem',
+            background: 'rgba(255, 255, 255, 0.1)',
+            backdropFilter: 'blur(10px)',
+            border: '1px solid rgba(255, 255, 255, 0.2)',
+            color: 'white',
+            padding: '0.8rem 1.5rem',
+            borderRadius: '12px',
+            textDecoration: 'none',
+            fontWeight: '600',
+            fontSize: '1rem',
+            transition: 'all 0.2s ease',
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.background = 'rgba(255, 255, 255, 0.2)';
+            e.currentTarget.style.transform = 'translateY(-2px)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.background = 'rgba(255, 255, 255, 0.1)';
+            e.currentTarget.style.transform = 'translateY(0)';
+          }}
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          Download Desktop App (.exe)
+        </a>
       </div>
 
       {/* Input Section */}

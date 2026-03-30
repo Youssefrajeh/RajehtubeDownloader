@@ -24,7 +24,7 @@
 
         <!-- Header -->
         <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,20">
-            <TextBlock Text="RajehTube" Foreground="{StaticResource AccentBrush}" FontSize="28" FontWeight="Bold"/>
+            <TextBlock Text="YouTube" Foreground="{StaticResource AccentBrush}" FontSize="28" FontWeight="Bold"/>
             <TextBlock Text=" Downloader" Foreground="{StaticResource TextBrush}" FontSize="28" FontWeight="Bold"/>
         </StackPanel>
 
