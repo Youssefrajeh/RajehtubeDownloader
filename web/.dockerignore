@@ -18,3 +18,4 @@ yarn-error.log
 tools/*.exe
 tools/*.bin
 tools/
+!tools/cookies.txt

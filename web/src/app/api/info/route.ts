@@ -31,7 +31,7 @@ export async function POST(req: NextRequest) {
     const cookiesPath = path.join(appDir, 'tools', 'cookies.txt');
     const cookieArgs = fs.existsSync(cookiesPath) ? ['--cookies', cookiesPath] : [];
 
-    const args = ['--dump-json', '--flat-playlist', '--js-runtimes', 'node', ...cookieArgs, url];
+    const args = ['--dump-json', '--flat-playlist', '--js-runtimes', 'node', '--user-agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', ...cookieArgs, url];
     
     return new Promise<NextResponse>((resolve) => {
       const process = spawn(actualPath, args);

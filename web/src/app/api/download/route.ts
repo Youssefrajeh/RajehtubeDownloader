@@ -49,9 +49,9 @@ export async function GET(req: NextRequest) {
 
     let args: string[] = [];
     if (isAudio) {
-      args = ['-x', '--audio-format', 'mp3', '--audio-quality', '0', '--js-runtimes', 'node', ...cookieArgs, '-o', '-', ...ffmpegArgs, url];
+      args = ['-x', '--audio-format', 'mp3', '--audio-quality', '0', '--js-runtimes', 'node', '--user-agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', ...cookieArgs, '-o', '-', ...ffmpegArgs, url];
     } else {
-      args = ['-f', `${formatId}+bestaudio/best`, '--merge-output-format', 'mp4', '--js-runtimes', 'node', ...cookieArgs, '-o', '-', ...ffmpegArgs, url];
+      args = ['-f', `${formatId}+bestaudio/best`, '--merge-output-format', 'mp4', '--js-runtimes', 'node', '--user-agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', ...cookieArgs, '-o', '-', ...ffmpegArgs, url];
     }
 
     const ytDlp = spawn(actualPath, args);
