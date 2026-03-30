@@ -1,0 +1,29 @@
+# .NET Gitignore from GitHub
+
+[Bb]in/
+[Oo]bj/
+_Saved/
+
+# tools folder - do not push binaries
+tools/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docuser
+
+# Visual Studio 2015/2017/2019/2022 cache/options directory
+.vs/
+
+# Artifacts
+[Aa]rtifacts/
+.gemini/
+
+# Node modules (if any)
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
