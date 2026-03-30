@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /api/download
+Disallow: /api/info
+
+Sitemap: https://rajehtube.com/sitemap.xml
