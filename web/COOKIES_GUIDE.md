@@ -7,15 +7,16 @@ To fix this, you need to provide a `cookies.txt` file from your own browser.
 ## 🛠️ Step-by-Step Guide
 
 ### 1. Install the Extension
-Install one of these "cookies.txt" extensions in Chrome, Edge, or Firefox:
-- **Chrome/Edge**: [Get cookies.txt LOCALLY](https://chrome.google.com/webstore/detail/get-cookiestxt-locally/ccmclokmhdneheandbkpledeepgenjlj) (Recommended)
-- **Firefox**: [export-cookies-txt](https://addons.mozilla.org/en-US/firefox/addon/export-cookies-txt/)
+Install **Cookie-Editor** (Highly recommended & available):
+- **Chrome/Edge**: [Cookie-Editor (Chrome Web Store)](https://chromewebstore.google.com/detail/cookie-editor/hlkennddfgjgacgmbmncjafodkllabdc)
+- **Firefox**: [Cookie-Editor (Add-ons)](https://addons.mozilla.org/en-US/firefox/addon/cookie-editor/)
 
 ### 2. Export your Cookies
-1.  Go to [YouTube.com](https://www.youtube.com) and make sure you are logged in.
-2.  Click the extension icon in your browser toolbar.
-3.  Click **"Export"** or **"Download"** for the current site (youtube.com).
-4.  Safe the file as **`cookies.txt`**.
+1.  Go to [YouTube.com](https://www.youtube.com).
+2.  Click the **Cookie-Editor** icon in your browser toolbar.
+3.  Click the **"Export"** button at the bottom.
+4.  Select **"Netscape"** (This is critical for yt-dlp).
+5.  Pasted the copied content into a new file named **`cookies.txt`**.
 
 ### 3. Add to your Project
 1.  Move the `cookies.txt` file into the `web/tools/` folder of your project.
