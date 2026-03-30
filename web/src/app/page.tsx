@@ -39,40 +39,7 @@ export default function Home() {
   };
 
   return (
-    <main style={{ padding: '2rem', minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', position: 'relative' }}>
-      {/* Top Right Desktop App Download */}
-      <a 
-        href="https://drive.google.com/file/d/19vUIwMNqMveJZliojYZhcT02TqvMOhha/view?usp=drive_link" 
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{
-          position: 'absolute',
-          top: '2rem',
-          right: '2rem',
-          display: 'inline-flex',
-          alignItems: 'center',
-          gap: '0.5rem',
-          background: 'linear-gradient(90deg, #ff0000, #ff007f)',
-          color: 'white',
-          padding: '0.8rem 1.5rem',
-          borderRadius: '99px',
-          textDecoration: 'none',
-          fontWeight: 'bold',
-          fontSize: '0.9rem',
-          boxShadow: '0 4px 15px rgba(255, 0, 0, 0.4)',
-          transition: 'transform 0.2s',
-          zIndex: 50
-        }}
-        onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.05)')}
-        onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
-      >
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-          <polyline points="7 10 12 15 17 10"></polyline>
-          <line x1="12" y1="15" x2="12" y2="3"></line>
-        </svg>
-        Get Desktop App
-      </a>
+    <main style={{ padding: '2rem', minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       {/* Hero Section */}
       <div style={{ textAlign: 'center', marginBottom: '3rem', marginTop: '2rem' }} className="animate-fade-in">
         <h1 style={{ fontSize: '4rem', fontWeight: '800', letterSpacing: '-0.05em', marginBottom: '1rem' }}>
@@ -81,7 +48,38 @@ export default function Home() {
         <p style={{ fontSize: '1.2rem', color: 'rgba(255,255,255,0.6)', maxWidth: '600px', margin: '0 auto', marginBottom: '1.5rem' }}>
           Experience the fast, secure, and modern way to download your favorite YouTube videos and playlists in high quality.
         </p>
-
+        
+        {/* Centered Desktop App Download */}
+        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '1.5rem' }}>
+          <a 
+            href="https://drive.google.com/file/d/19vUIwMNqMveJZliojYZhcT02TqvMOhha/view?usp=sharing" 
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.5rem',
+              background: 'linear-gradient(90deg, #ff0000, #ff007f)',
+              color: 'white',
+              padding: '0.8rem 1.5rem',
+              borderRadius: '99px',
+              textDecoration: 'none',
+              fontWeight: 'bold',
+              fontSize: '0.9rem',
+              boxShadow: '0 4px 15px rgba(255, 0, 0, 0.4)',
+              transition: 'transform 0.2s'
+            }}
+            onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.05)')}
+            onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            Download Desktop App (.exe)
+          </a>
+        </div>
       </div>
 
       {/* Input Section */}
